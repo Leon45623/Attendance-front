@@ -1,0 +1,31 @@
+ <ion-view >
+    <ion-content>
+    	
+    	
+	  <div class="bar bar-header">
+      <div class="h1 title">登录</div>
+    </div>	
+		
+		
+ <div class="content has-header">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">账号</span>
+          <input type="text" placeholder="请输入ID" ng-model="user.pwId">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">密码</span>
+          <input type="password" placeholder="请输入密码" ng-model="user.password">
+        </label>
+      </div>
+      <div class="padding">
+          <button class="button button-block button-positive" ng-click="login()">登录</button>
+        </div>
+        <div class="padding">
+          <a href="#/register"　>新用户注册</a>
+        </div>
+  </div>
+  	
+    	
+  </ion-view >
+ </ion-content>

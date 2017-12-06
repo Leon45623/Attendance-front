@@ -1,0 +1,54 @@
+ <ion-view >
+    <ion-content>
+<div id="header" style="text-align:center;">
+
+<span style="width:10%;float:left" ng-click="gotohome()"><i class="icon ion-chevron-left" ></i></span>
+
+<span style="width:80%;float:left">员工管理</span>
+
+</div>
+
+
+<div class="row">
+<div class="col-lg-6">
+<div class="input-group" >
+
+<input  type="text"  ng-model="body.msg"  class="form-control" placeholder="Search" style="height:40px;border-color: #ddd;
+    background-color: #fff; border-style: solid;
+    font-size: 16px;   border-width: 1px;color: #444;">
+ <span class="input-group-btn">
+ <button class="btn btn-default" type="button" style="height:40px;border-color: #ddd;
+    background-color: #fff; border-style: solid;
+    font-size: 16px;   border-width: 1px;color: #444;border-radius:0;" ng-click="findbodyById()">
+ <span class="glyphicon glyphicon-search"   >
+ 
+ </span>
+ 
+ </button>
+ </span>
+ 
+ </span>
+ 
+</div>
+
+</div>
+
+
+</div>
+	
+	
+	 <div class="list"  ng-repeat="employee in employees" >
+          <div class="item item-avatar" style="border:1px solid #f5f5f5;" ng-click="gotoaddemployee({{employee.pwId}})" >
+          <img src="{{employee.headportrait}}"  >
+            <h2 >{{employee.name}}</h2>
+            <p  style="text-align:right;font-size:14px;font-weight:bold;" ng-if="employee.location!=null">他的位置:<span style="color:#0099ff">{{employee.location}}</span></p>
+ <p  style="text-align:right; font-size:14px;font-weight:bold;" ng-if="employee.location==null">未签到</p>
+          </div>
+        </div>
+
+	
+	
+	
+	
+  </ion-view >
+ </ion-content>

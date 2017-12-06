@@ -1,0 +1,138 @@
+ <ion-view >
+    <ion-content>
+	 
+<div id="header">
+
+<div id="div1" >
+<img src="{{user.headportrait}}" id="img1">
+</div>
+{{user.name}}
+</div>
+   
+    
+	  <div   class="shawn" >
+	  <span style="margin-left:10px;">待办事项</span>
+      </div>
+	  <div style="width:100%;height:100px;text-align:center;overflow:hidden;">  
+	  <span style="width:10%;filter:alpha(opacity=50); 
+-moz-opacity:0.5; 
+opacity:0.5;color:#666666;height:100px;position:absolute;top:75px;left:0;line-height:100px;" ng-click="gotolast()"><i class="icon ion-chevron-left" ></i></span>
+	  <div ng-repeat="user in pageBean.data" style="width:75%;height:30px;line-height:30px;float:left;margin-left:10%;">
+	 <span style="color:#0099ff;font-weight:bold;"> {{user.name}}</span>的 <span  style="color:#0099ff;font-weight:bold;"> {{user.result}}</span>需要您核对
+	  <span style="color:#0099ff;font-weight:bold;float:right;">{{user.date}}</span>
+	  
+	  </div>
+	<span style="width:10%;filter:alpha(opacity=50); 
+-moz-opacity:0.5; 
+opacity:0.5;color:#666666;position:absolute;top:75px;right:0;height:100px;line-height:100px;" ng-click="gotonext()"><i class="icon ion-chevron-right" ></i></span>
+	
+	  </div>
+	
+	
+		
+	  <div  class="shawn"  >
+	 <span style="margin-left:10px;"> 常用功能</span>
+      </div>	 
+	
+	  
+<table  >
+   <tr >
+   
+   <td  ng-click="gotomysheet()" id="td1" >
+   
+   <dl >
+   <dt >
+    <span class="glyphicon glyphicon-hand-up"  style="color:green;font-size:20px;"></span>
+   </dt>
+   <dd>
+    我的考勤
+   </dd>
+   </dl>
+   </td>
+   
+    <td ng-click="gotostatis()" >
+	
+   <dl >
+   <dt>
+    <span class="glyphicon glyphicon-stats"  style="color:#fb6f18;font-size:20px;"></span>
+   </dt>
+   <dd>
+    考勤统计
+   </dd>
+   </dl>
+   </td>
+   
+   
+ 
+   
+    <td  ng-click="gotoSeat()">
+   <dl >
+   <dt>
+    <span class="glyphicon glyphicon-inbox"  style="color:#1196EE;font-size:20px;"></span>
+   </dt>
+   <dd>
+    座位查询
+   </dd>
+   </dl>
+   </td>
+   
+    <td ng-click="gotocheck()">
+   <dl >
+   <dt>
+    <span class="glyphicon glyphicon-calendar"  style="color:blue;font-size:20px;"></span>
+   </dt>
+   <dd>
+    考勤核对
+   </dd>
+   </dl>
+   </td>
+   
+   </tr>
+   
+   <tr>
+   
+    <td  ng-click="gotolist()" id="td2">
+   <dl >
+   <dt>
+    <span class="glyphicon glyphicon-user"  style="color:#D5D52B;font-size:20px;"></span>
+   </dt>
+   <dd>
+    员工管理
+   </dd>
+   </dl>
+   </td>
+   <td></td>
+   <td></td>
+   <td></td>
+   </tr>
+</table>	  	
+
+	
+
+	  <div class="shawn" >
+	   <span style="margin-left:10px;">考勤签到</span>
+      </div>
+	  
+	  <div style="width:100%;height:90px;">
+	  
+	  <p class="text-left" style="margin-top:20px;">
+	 <span  id="span2"> 上班时间：9:00-17:30</span>
+	  </p>
+	 
+	  <div  id="checkin">
+	  	<button ng-click="checkin()" class="buttoncheck" id="btn1">签到</button>
+	</div>
+	
+	<div  id="checkout">
+		<button ng-click="checkout()"  class="buttoncheck">签退</button>
+	</div>
+
+	
+	  </div>
+
+	
+	
+    	
+	
+  </ion-view >
+ </ion-content>

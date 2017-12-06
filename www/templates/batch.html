@@ -1,0 +1,43 @@
+ <ion-view >
+    <ion-content>
+    	
+	<div id="header" style="text-align:center;">
+
+<span style="width:10%;float:left" ng-click="gotocheck()"><i class="icon ion-chevron-left" ></i></span>
+
+<span style="width:80%;float:left">考勤核对</span>
+</div>
+<div ng-click="gotobatchdetail()" id="tehe"style="width:100%;overflow:hidden;border-bottom:1px solid #f5f5f5;text-align:center">
+<span style="float:left;margin-left:20px;">核对结果</span>
+<span style="float:left;margin-left:10px;color:#bbbbbb;font-size:12px;" ng-if="info.checkInfo==null">请选择</span>
+<span style="float:left;margin-left:10px;color:#bbbbbb;font-size:12px;" ng-if="info.checkInfo!=null">{{info.checkInfo}}</span>
+<span style="float:right;margin-right:20px;font-size:20px;color:#b2b2b2;" ><i class="icon ion-chevron-right" ></i></span>
+</div>
+
+
+<div id="wger" style="width:100%;border-bottom:1px solid #f5f5f5;overflow:hidden;">
+<span style="float:left;margin-left:20px;float:left;" id="iod">备注</span>
+<textarea ng-model="result.remake" id="adf" style="float:right;border:none;"placeholder='请输入备注'>
+</textarea>
+</div>
+
+<div>
+
+
+
+</div>
+			
+	  <div  id="checkin">
+	  	<button ng-click="gotocheck()" class="buttoncheck" style="background-color:#EE2C2C;border:none;border-radius:2px;width: 60%;margin-top:20px;">取消</button>
+	</div>
+	
+	<div  id="checkout">
+		<button ng-click="addRemake()"  class="buttoncheck"  style="border-radius:2px;width: 60%;margin-top:20px;">确定</button>
+	</div>
+
+	
+	  </div>		
+    	
+    	
+  </ion-view >
+ </ion-content>

@@ -1,0 +1,48 @@
+<ion-view >
+    <ion-content>
+	  <ion-refresher pulling-text="" on-refresh="doRefresh()"></ion-refresher>
+	    	<div id="header" style="text-align:center;">
+
+<span style="width:10%;float:left" ng-click="gotouser()"><i class="icon ion-chevron-left" ></i></span>
+
+<span style="width:80%;float:left">头像上传</span>
+</div>
+
+
+ <form class="form-horizontal"  role="form" enctype="multipart/form-data" method="post"  id="uploadForm">
+ <!--
+<img    src="{{user.headportrait}}"  style="border-radius:50%;height:95px;width:100px;">
+-->
+<input type="hidden" name="pwId" value="{{user.pwId}}"/>
+
+<div class="fileUpload btn btn-primary" id="uploaddiv">
+
+
+    <input id="uploadBtn" type="file" class="upload" name="file"/>
+
+	</div>
+    <button class="upload" type="submit"   ng-click="upload()" style="color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;height:45px;" id="uploadtest">上传</button>
+
+ </form>
+
+<!--
+	<div style="width:100%;background-color:#f5f5f5;"  >
+	   <form class="form-horizontal"  role="form" enctype="multipart/form-data" method="post"  id="uploadForm">
+
+	<img    src="{{user.headportrait}}"  style="border-radius:50%;height:95px;width:100px;">
+<input type="hidden" name="pwId" value="{{user.pwId}}"/>
+	  
+	  <a href="javaScript:;" class="a-upload">
+	  <input type="file"  name="file"  >选择文件
+	  </a>
+	  <button class="a-upload" type="submit"  style="margin-top:20px;" ng-click="upload()">上传</button>
+
+ </form>
+
+      <div>
+-->
+	
+	 </ion-content>
+  </ion-view>

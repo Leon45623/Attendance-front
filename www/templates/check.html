@@ -1,0 +1,76 @@
+ <ion-view >
+    <ion-content>
+    	<div id="header" style="text-align:center;">
+
+<span style="width:15%;float:left;height:44px;line-height:44px;" ng-click="gotohome()"><i class="icon ion-chevron-left" ></i></span>
+
+<span style="width:70%;float:left;height:44px;line-height:44px;">考勤核对</span>
+<!--
+<span style="width:15%;float:right;font-size:10px;" ng-click="datecheck()">	选择日期</span>
+-->
+</div>
+<div   class="shawn"style="text-align:center;overflow:hidden;" >
+  <span style="width:50%;float:left ;" id="check1" ng-click="findnoChecked()">未核对</span>
+   <span style="width:50%;float:left ;" id="check2" ng-click="findisChecked()">已核对</span>
+	
+ </div>
+
+
+
+      <div class="list">
+
+        <a class="item item-avatar" ng-repeat="employee in employees" ng-click="check({{employee.pwId}})" >
+           <img src="{{employee.headportrait}}" id="img1" >
+          <h2 style="font-size:14px;font-weight:bold;color:#0099ff;">{{employee.name}}:{{employee.result}}</h2>
+          <p>
+		  <h2 style="font-size:14px;font-weight:bold;" >
+		  <span ng-if="employee.checkInfo!=null" >核对结果:
+<span style="font-weight:bold;color:#0099ff;">{{employee.checkInfo}}</span></span>
+	<span ng-if="employee.checkInfo!=null" >&nbsp;&nbsp;&nbsp;备注:
+<span style="font-weight:bold;color:#0099ff;">{{employee.remake}}</span></span>
+	</h2>
+	<h2 style="font-weight:bold;font-size:14px;margin-bottom:0px;" class="text-right">
+			  <span>日期:
+<span style="font-weight:bold;color:#0099ff;">{{employee.date}}</span></span>
+	
+	</h2>
+	</p>
+        </a>
+      </div>
+
+
+ 
+ 
+ 
+ <!--
+ 
+ 
+		<div    style="height:70px;line-height:70px;max-height:70px;width:100%;"  >
+		  
+
+		  <img src="{{employee.headportrait}}" id="img1" >
+		<span style="text-align:right;font-size:14px;font-weight:bold;color:#0099ff">	{{employee.name}}:{{employee.result}}</span>
+			
+	
+	<span ng-if="employee.checkInfo!=null" style="margin-left:10px;font-size:14px;">
+核对结果:<span style="font-weight:bold;color:#0099ff;">{{employee.checkInfo}}</span></span>
+	<span ng-if="employee.checkInfo!=null" style="margin-left:30px;font-size:14px;">
+备注:<span style="font-weight:bold;color:#0099ff;">{{employee.remake}}</span></span>
+	
+	<span style="width:100%;line-height:40px;font-weight:bold;" class="text-right">
+<span style="margin-right:30px;">		日期:2017-03-24</span>
+	</span>
+	</div>
+	-->
+	<!--
+		<p style="width:100%;line-height:40px;font-weight:bold;" class="text-right">
+<span style="margin-right:30px;">		日期:{{time}}</span>
+	</p>
+				
+		-->	
+
+	
+			
+    	
+  </ion-view >
+ </ion-content>

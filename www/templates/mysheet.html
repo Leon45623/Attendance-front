@@ -1,0 +1,34 @@
+ <ion-view >
+    <ion-content>
+    	<div id="header" style="text-align:center;">
+
+<span style="width:15%;float:left;height:44px;line-height:44px;" ng-click="gotohome()"><i class="icon ion-chevron-left" ></i></span>
+
+<span style="width:70%;float:left;height:44px;line-height:44px;">我的考勤</span>
+</div>
+  <div id='container'></div>
+		<p style="width:100%;height:auto;margin-top:15px;">
+		<div style="width:50%;float:left;text-align:center;font-size:15px;font-weight:bold;" 
+		ng-if="sheet.beginTime!=null"
+		>
+		签到时间: {{sheet.beginTime}}
+		</div>
+			<div style="width:50%;float:left;text-align:center;font-size:15px;font-weight:bold;" 
+		ng-if="sheet.beginTime==null"
+		>
+		签到时间: 暂无
+		</div>
+		<div style="width:50%;float:right;text-align:center;font-size:15px;font-weight:bold;"
+        ng-if="sheet.endTime!=null"
+		>
+		 签退时间:{{sheet.endTime}}
+		</div>
+		<div style="width:50%;float:right;text-align:center;font-size:15px;font-weight:bold;"
+        ng-if="sheet.endTime==null"
+		>
+		 签退时间:暂无
+		</div>
+	 
+	</p>
+  </ion-view >
+ </ion-content>

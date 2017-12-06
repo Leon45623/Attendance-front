@@ -1,0 +1,30 @@
+
+
+ <ion-view >
+    <ion-content>
+    		  <div class="bar bar-header">
+      <div class="h1 title">注册</div>
+    </div>	
+		
+	 <div class="content has-header">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">账号</span>
+          	<input  type="text"  placeholder="请输入账号" ng-model="user.pwId" required   ng-required="true">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">密码</span>
+        	<input  type="password"  placeholder="请输入密码" ng-model="user.password" required   ng-required="true"  ng-minlength="6">
+        </label>
+      </div>
+      	<div class="padding">
+				<button id='reg' class="button button-block button-positive" ng-click="next()">下一步</button>
+			</div>
+  </div>	
+		
+		
+
+		 </ion-view >
+    </ion-content>
+    
+

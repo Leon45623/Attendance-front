@@ -1,0 +1,39 @@
+ <ion-view >
+    <ion-content>
+	<div id="header" style="text-align:center;">
+<span style="width:10%;float:left" ng-click="gotohome()"><i class="icon ion-chevron-left" ></i></span>
+
+<span style="width:80%;float:left">考勤统计</span>
+</div>
+  <div   class="shawn"style="text-align:center;" >
+  <span style="width:10%;float:left" ng-click="reduce()"><i class="icon ion-chevron-left" ></i></span>
+	  <span style="width:80%;">{{year}}-{{month}}</span>
+	  <span style="width:10%;float:right" ng-click="add()"><i class="icon ion-chevron-right" ></i></span>
+      </div>
+	  <div ng-if="ishasData==true">
+	  <div id="main" ></div>
+
+	  
+	  <table style="width:100%;">
+<tr style="width:100%;height:50px;border-top:1px solid #f5f5f5;">
+
+<td style="width:25%;border-right:1px solid #f5f5f5"  ng-click="gotoexception('早退')">
+早退:<span style="color:#0099ff">{{leaveearly}}</span>次</td>
+<td style="width:25%;text-align:left;height:100%;border-right:1px solid #f5f5f5" " ng-click="gotoexception('迟到')" >
+迟到:<span style="color:#0099ff">{{comelate}}</span>次</td>
+<td style="width:25%;text-align:left;height:100%;border-right:1px solid #f5f5f5" " ng-click="gotoexception('漏刷卡')">
+漏刷卡:<span style="color:#0099ff">{{forgetcheck}}</span>次</td>
+<td style="width:25%;text-align:left;height:100%;" ng-click="gotoexception('旷工')">
+旷工:<span style="color:#0099ff">{{leave}}</span>次</td>
+</tr>
+</table>
+    	</div>
+		<div ng-if="ishasData==false">
+		暂时没有数据.
+		</div>
+		
+		
+	
+    	
+  </ion-view >
+ </ion-content>
